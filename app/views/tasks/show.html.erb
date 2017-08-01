@@ -1,0 +1,9 @@
+<h1>Task Manager</h1>
+
+<h3>Task: <%= @task.name %></h3>
+<br>
+<%= link_to "Edit", edit_task_path(@task) %>
+<br>
+<%= link_to "Delete", task_path(@task), method: 'delete', data: { confirm: "Are you sure?" } %>
+<br>
+<%= link_to "Show all tasks", tasks_path %>

@@ -1,0 +1,13 @@
+<h1>Task Manager</h1>
+<!-- Display a list of all tasks and for each task:
+-->
+<!-- <form action="/tasks/new">
+  <input type="submit" value="Create new task">
+</form> -->
+<%= link_to "New Task", new_task_path%>
+
+<h2>Here are your tasks:</h2>
+
+<% @tasks.each do |task| %>
+  <p><%= link_to task.name, task_path(task) %></p>
+<% end %>
